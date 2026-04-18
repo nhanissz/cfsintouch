@@ -1,49 +1,49 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
+/* ... (Keep your previous styles, add these below) ... */
+
+.controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 2px solid #34495e;
-    padding-bottom: 20px;
+#theme-toggle {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
 }
 
-#knowledge-container {
-    max-width: 800px;
-    margin: 0 auto;
-    display: grid;
-    gap: 20px;
+#search-bar {
+    width: 80%;
+    max-width: 500px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.entry-card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+#search-bar:focus {
+    transform: scale(1.05);
 }
 
-.entry-card:hover {
-    transform: translateY(-5px);
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(45deg, #2c3e50 0%, #000000 100%);
 }
 
-.entry-card h2 {
-    margin-top: 0;
-    color: #2c3e50;
+body.dark-mode .entry-card {
+    background: #1e272e;
+    color: white;
+    border: 1px solid #3d4e5d;
 }
 
-.tag {
-    display: inline-block;
-    background: #e1ecf4;
-    color: #39739d;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    margin-bottom: 10px;
+body.dark-mode h2, body.dark-mode p, body.dark-mode strong {
+    color: #ecf0f1;
 }
